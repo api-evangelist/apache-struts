@@ -1,0 +1,137 @@
+openapi: 3.1.0
+info:
+  title: Apache Struts REST Plugin
+  description: >-
+    The Apache Struts 2 REST Plugin provides RESTful resource-based mapping of
+    HTTP requests to controller actions. URLs follow a convention-based pattern
+    mapping HTTP verbs and URL shapes to controller methods (index, show, create,
+    update, destroy, edit, editNew). This OpenAPI describes the generic URL
+    convention applied to any resource exposed through the plugin.
+  version: "1.0.0"
+  license:
+    name: Apache License 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  contact:
+    name: Apache Struts
+    url: https://struts.apache.org/plugins/rest/
+servers:
+  - url: http://{host}/{context}
+    description: Application server hosting the Struts REST plugin
+    variables:
+      host:
+        default: my.company.com
+      context:
+        default: myapp
+tags:
+  - name: resource
+    description: Generic RESTful resource exposed by the Struts REST plugin
+paths:
+  /{resource}:
+    parameters:
+      - $ref: '#/components/parameters/Resource'
+    get:
+      tags: [resource]
+      summary: List resources (index)
+      operationId: indexResources
+      responses:
+        '200':
+          description: Resource collection
+          content:
+            application/json: {}
+            application/xml: {}
+            application/xhtml+xml: {}
+    post:
+      tags: [resource]
+      summary: Create a new resource
+      operationId: createResource
+      requestBody:
+        required: true
+        content:
+          application/json: {}
+          application/x-www-form-urlencoded: {}
+      responses:
+        '201':
+          description: Resource created
+  /{resource}/new:
+    parameters:
+      - $ref: '#/components/parameters/Resource'
+    get:
+      tags: [resource]
+      summary: Render form for a new resource (editNew)
+      operationId: editNewResource
+      responses:
+        '200':
+          description: New-resource form representation
+  /{resource}/{id}:
+    parameters:
+      - $ref: '#/components/parameters/Resource'
+      - $ref: '#/components/parameters/Id'
+    get:
+      tags: [resource]
+      summary: Show a single resource by id
+      operationId: showResource
+      responses:
+        '200':
+          description: Single resource representation
+          content:
+            application/json: {}
+            application/xml: {}
+            application/xhtml+xml: {}
+        '404':
+          description: Not found
+    put:
+      tags: [resource]
+      summary: Update a single resource (update)
+      operationId: updateResource
+      requestBody:
+        required: true
+        content:
+          application/json: {}
+          application/x-www-form-urlencoded: {}
+      responses:
+        '200':
+          description: Resource updated
+    delete:
+      tags: [resource]
+      summary: Delete a single resource (destroy)
+      operationId: destroyResource
+      responses:
+        '204':
+          description: Resource deleted
+  /{resource}/{id}/edit:
+    parameters:
+      - $ref: '#/components/parameters/Resource'
+      - $ref: '#/components/parameters/Id'
+    get:
+      tags: [resource]
+      summary: Render edit form for an existing resource (edit)
+      operationId: editResource
+      responses:
+        '200':
+          description: Edit form representation
+components:
+  parameters:
+    Resource:
+      name: resource
+      in: path
+      required: true
+      description: The resource name (mapped to a Struts controller)
+      schema:
+        type: string
+    Id:
+      name: id
+      in: path
+      required: true
+      description: Resource identifier
+      schema:
+        type: string
+  securitySchemes:
+    strutsInterceptor:
+      type: http
+      scheme: basic
+      description: >-
+        The REST plugin does not define authentication itself; authentication is
+        typically applied via standard Struts interceptors (HTTP Basic, form
+        login, container-managed, etc.).
+security:
+  - strutsInterceptor: []
