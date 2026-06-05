@@ -1,13 +1,22 @@
 # Apache Struts (apache-struts)
-Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications. It provides a clean separation between the model, view, and controller layers with a powerful convention-over-configuration approach, interceptor-based AOP support, and built-in REST plugin.
 
-**URL:** [https://struts.apache.org/](https://struts.apache.org/)
+Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications. It provides a clean separation between the model, view, and controller layers with a powerful convention-over-configuration approach, interceptor-based AOP support, type-safe configuration, and built-in REST plugin. Apache Struts is maintained by the Apache Software Foundation and is widely used in enterprise Java web development.
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/apis.yml)
 
-## Tags:
+## Scope
 
- - Java, MVC, Web Applications, Web Framework, Open Source
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Java
+- MVC
+- Web Applications
+- Web Framework
+- Open Source
 
 ## Timestamps
 
@@ -17,61 +26,41 @@ Apache Struts is a free, open-source, MVC framework for creating elegant, modern
 ## APIs
 
 ### Apache Struts REST Plugin
-Convention-based REST API framework mapping HTTP methods to action methods with JSON, XML, and HTML content type negotiation.
 
-**Human URL:** [https://struts.apache.org/plugins/rest/](https://struts.apache.org/plugins/rest/)
+The Struts REST Plugin provides a convention-based REST API framework for building RESTful services. It maps HTTP methods to action methods (GET→index/show, POST→create, PUT→update, DELETE→destroy) and supports multiple content type negotiation for JSON, XML, and HTML responses via content type headers and URL extensions.
 
-#### Tags:
+- **Human URL:** [https://struts.apache.org/plugins/rest/](https://struts.apache.org/plugins/rest/)
 
- - REST, Java, MVC, JSON, XML
+#### Tags
+
+- REST
+- Java
+- MVC
+- JSON
+- XML
 
 #### Properties
 
 - [Documentation](https://struts.apache.org/plugins/rest/)
-- [Maven Java SDK](https://search.maven.org/search?q=org.apache.struts2)
+- [SDK](https://search.maven.org/search?q=org.apache.struts2)
+- [Postman Collection](collections/apache-struts.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/apache-struts.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ## Common Properties
 
-- [GitHubRepository](https://github.com/apache/struts)
+- [GitHub Repository](https://github.com/apache/struts)
 - [Documentation](https://struts.apache.org/documentation.html)
 - [Portal](https://struts.apache.org/)
-- [GettingStarted](https://struts.apache.org/getting-started/index.html)
-- [ReleaseNotes](https://github.com/apache/struts/releases)
+- [Getting Started](https://struts.apache.org/getting-started/index.html)
+- [Release Notes](https://github.com/apache/struts/releases)
 - [Support](https://struts.apache.org/support.html)
-- [TermsOfService](https://www.apache.org/licenses/)
-- [FAQ](https://struts.apache.org/faq.html)
-
-## Features
-
-| Name | Description |
-|------|-------------|
-| Convention-Over-Configuration | Zero-XML configuration with naming conventions for action and result mapping. |
-| Interceptor Framework | AOP-style interceptors for cross-cutting concerns like validation, logging, and security. |
-| Type Conversion | Automatic type conversion between HTTP request parameters and Java types. |
-| OGNL Expression Language | Object-Graph Navigation Language for dynamic data binding and expression evaluation. |
-| REST Plugin | Convention-based REST API support with content type negotiation. |
-| Spring Integration | Native Spring Framework integration for dependency injection. |
-
-## Use Cases
-
-| Name | Description |
-|------|-------------|
-| Enterprise Java Web Applications | Build large-scale Java web applications with clean MVC separation. |
-| RESTful Web Services | Create REST APIs using the Struts REST plugin with JSON/XML content negotiation. |
-| Form-Based Applications | Complex form processing with server-side validation and type conversion. |
-
-## Integrations
-
-| Name | Description |
-|------|-------------|
-| Spring Framework | Native Spring IoC container integration for dependency injection. |
-| Hibernate | Hibernate ORM integration for database persistence in action classes. |
-| Apache Tiles | Template composition framework for reusable page layouts and components. |
-| FreeMarker | FreeMarker template engine support as an alternative to JSP views. |
-| Velocity | Apache Velocity template engine for HTML view rendering. |
+- [Terms of Service](https://www.apache.org/licenses/)
+- [F A Q](https://struts.apache.org/faq.html)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
 
 ## Maintainers
 
 **FN:** Kin Lane
-
 **Email:** info@apievangelist.com
