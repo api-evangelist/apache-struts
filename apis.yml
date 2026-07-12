@@ -43,6 +43,12 @@ apis:
         url: https://search.maven.org/search?q=org.apache.struts2
         title: Maven Java SDK
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-struts-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-struts-domain-security.yml
+  - type: Authentication
+    url: authentication/apache-struts-authentication.yml
   - type: GitHubRepository
     url: https://github.com/apache/struts
   - type: Documentation
@@ -95,6 +101,8 @@ common:
         description: FreeMarker template engine support as an alternative to JSP views.
       - name: Velocity
         description: Apache Velocity template engine for HTML view rendering.
+  - type: Blog
+    url: https://struts.apache.org/announce.html
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com

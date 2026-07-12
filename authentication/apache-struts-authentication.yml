@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/apache-struts-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: strutsInterceptor
+  type: http
+  scheme: basic
+  description: The REST plugin does not define authentication itself; authentication is typically
+    applied via standard Struts interceptors (HTTP Basic, form login, container-managed, etc.).
+  sources:
+  - openapi/apache-struts-openapi.yml
