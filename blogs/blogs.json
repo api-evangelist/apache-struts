@@ -1,0 +1,18 @@
+{
+  "repo": "apache-struts",
+  "feeds": [
+    {
+      "source": "https://struts.apache.org/announce.html",
+      "feed_url": "https://struts.apache.org/announce.html",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://struts.apache.org/faq.html",
+      "error": "HTTPError"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 8
+}
