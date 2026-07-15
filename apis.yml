@@ -43,6 +43,8 @@ apis:
         url: https://search.maven.org/search?q=org.apache.struts2
         title: Maven Java SDK
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-struts-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-struts-vulnerability-disclosure.yml
   - type: DomainSecurity
