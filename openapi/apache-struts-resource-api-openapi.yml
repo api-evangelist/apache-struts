@@ -1,13 +1,8 @@
 openapi: 3.1.0
 info:
-  title: Apache Struts REST Plugin
-  description: >-
-    The Apache Struts 2 REST Plugin provides RESTful resource-based mapping of
-    HTTP requests to controller actions. URLs follow a convention-based pattern
-    mapping HTTP verbs and URL shapes to controller methods (index, show, create,
-    update, destroy, edit, editNew). This OpenAPI describes the generic URL
-    convention applied to any resource exposed through the plugin.
-  version: "1.0.0"
+  title: Apache Struts REST Plugin resource API
+  description: The Apache Struts 2 REST Plugin provides RESTful resource-based mapping of HTTP requests to controller actions. URLs follow a convention-based pattern mapping HTTP verbs and URL shapes to controller methods (index, show, create, update, destroy, edit, editNew). This OpenAPI describes the generic URL convention applied to any resource exposed through the plugin.
+  version: 1.0.0
   license:
     name: Apache License 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0
@@ -15,22 +10,25 @@ info:
     name: Apache Struts
     url: https://struts.apache.org/plugins/rest/
 servers:
-  - url: http://{host}/{context}
-    description: Application server hosting the Struts REST plugin
-    variables:
-      host:
-        default: my.company.com
-      context:
-        default: myapp
+- url: http://{host}/{context}
+  description: Application server hosting the Struts REST plugin
+  variables:
+    host:
+      default: my.company.com
+    context:
+      default: myapp
+security:
+- strutsInterceptor: []
 tags:
-  - name: resource
-    description: Generic RESTful resource exposed by the Struts REST plugin
+- name: resource
+  description: Generic RESTful resource exposed by the Struts REST plugin
 paths:
   /{resource}:
     parameters:
-      - $ref: '#/components/parameters/Resource'
+    - $ref: '#/components/parameters/Resource'
     get:
-      tags: [resource]
+      tags:
+      - resource
       summary: List resources (index)
       operationId: indexResources
       responses:
@@ -41,7 +39,8 @@ paths:
             application/xml: {}
             application/xhtml+xml: {}
     post:
-      tags: [resource]
+      tags:
+      - resource
       summary: Create a new resource
       operationId: createResource
       requestBody:
@@ -54,9 +53,10 @@ paths:
           description: Resource created
   /{resource}/new:
     parameters:
-      - $ref: '#/components/parameters/Resource'
+    - $ref: '#/components/parameters/Resource'
     get:
-      tags: [resource]
+      tags:
+      - resource
       summary: Render form for a new resource (editNew)
       operationId: editNewResource
       responses:
@@ -64,10 +64,11 @@ paths:
           description: New-resource form representation
   /{resource}/{id}:
     parameters:
-      - $ref: '#/components/parameters/Resource'
-      - $ref: '#/components/parameters/Id'
+    - $ref: '#/components/parameters/Resource'
+    - $ref: '#/components/parameters/Id'
     get:
-      tags: [resource]
+      tags:
+      - resource
       summary: Show a single resource by id
       operationId: showResource
       responses:
@@ -80,7 +81,8 @@ paths:
         '404':
           description: Not found
     put:
-      tags: [resource]
+      tags:
+      - resource
       summary: Update a single resource (update)
       operationId: updateResource
       requestBody:
@@ -92,7 +94,8 @@ paths:
         '200':
           description: Resource updated
     delete:
-      tags: [resource]
+      tags:
+      - resource
       summary: Delete a single resource (destroy)
       operationId: destroyResource
       responses:
@@ -100,10 +103,11 @@ paths:
           description: Resource deleted
   /{resource}/{id}/edit:
     parameters:
-      - $ref: '#/components/parameters/Resource'
-      - $ref: '#/components/parameters/Id'
+    - $ref: '#/components/parameters/Resource'
+    - $ref: '#/components/parameters/Id'
     get:
-      tags: [resource]
+      tags:
+      - resource
       summary: Render edit form for an existing resource (edit)
       operationId: editResource
       responses:
@@ -111,13 +115,6 @@ paths:
           description: Edit form representation
 components:
   parameters:
-    Resource:
-      name: resource
-      in: path
-      required: true
-      description: The resource name (mapped to a Struts controller)
-      schema:
-        type: string
     Id:
       name: id
       in: path
@@ -125,13 +122,15 @@ components:
       description: Resource identifier
       schema:
         type: string
+    Resource:
+      name: resource
+      in: path
+      required: true
+      description: The resource name (mapped to a Struts controller)
+      schema:
+        type: string
   securitySchemes:
     strutsInterceptor:
       type: http
       scheme: basic
-      description: >-
-        The REST plugin does not define authentication itself; authentication is
-        typically applied via standard Struts interceptors (HTTP Basic, form
-        login, container-managed, etc.).
-security:
-  - strutsInterceptor: []
+      description: The REST plugin does not define authentication itself; authentication is typically applied via standard Struts interceptors (HTTP Basic, form login, container-managed, etc.).
