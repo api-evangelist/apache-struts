@@ -7,9 +7,22 @@ description: >-
   type-safe configuration, and built-in REST plugin. Apache Struts is maintained by the Apache
   Software Foundation and is widely used in enterprise Java web development.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-struts.png
 tags:
   - Java
   - MVC
@@ -22,26 +35,35 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-struts:apache-struts-rest-plugin
-    name: Apache Struts REST Plugin
-    description: >-
-      The Struts REST Plugin provides a convention-based REST API framework for building
-      RESTful services. It maps HTTP methods to action methods (GET→index/show, POST→create,
-      PUT→update, DELETE→destroy) and supports multiple content type negotiation for JSON,
-      XML, and HTML responses via content type headers and URL extensions.
-    humanURL: https://struts.apache.org/plugins/rest/
-    tags:
-      - REST
-      - Java
-      - MVC
-      - JSON
-      - XML
-    properties:
-      - type: Documentation
-        url: https://struts.apache.org/plugins/rest/
-      - type: SDKs
-        url: https://search.maven.org/search?q=org.apache.struts2
-        title: Maven Java SDK
+- aid: apache-struts:apache-struts-rest-plugin
+  name: Apache Struts REST Plugin
+  description: >-
+    The Struts REST Plugin provides a convention-based REST API framework for building RESTful services.
+    It maps HTTP methods to action methods (GET→index/show, POST→create, PUT→update, DELETE→destroy) and
+    supports multiple content type negotiation for JSON, XML, and HTML responses via content type headers
+    and URL extensions.
+  humanURL: https://struts.apache.org/plugins/rest/
+  tags:
+  - REST
+  - Java
+  - MVC
+  - JSON
+  - XML
+  properties:
+  - type: Documentation
+    url: https://struts.apache.org/plugins/rest/
+  - type: SDKs
+    url: https://search.maven.org/search?q=org.apache.struts2
+    title: Maven Java SDK
+- aid: apache-struts:apache-struts-resource-api
+  name: Apache Struts resource API
+  description: Generic RESTful resource exposed by the Struts REST plugin
+  humanURL: https://struts.apache.org/plugins/rest/
+  tags:
+  - resource
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-struts-resource-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/apache-struts-agentic-access.yml
