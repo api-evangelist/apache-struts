@@ -1,0 +1,14 @@
+{
+  "provider": "apache-struts",
+  "sources": [
+    "apache-struts-resource-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-struts-resource-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
