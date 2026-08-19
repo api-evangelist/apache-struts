@@ -1,0 +1,190 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Struts REST Plugin resource API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "resource",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List resources (index)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}/{context}/:resource",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              }
+            ]
+          },
+          "docs": "List resources (index)"
+        },
+        {
+          "info": {
+            "name": "Create a new resource",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://{host}/{context}/:resource",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new resource"
+        },
+        {
+          "info": {
+            "name": "Render form for a new resource (editNew)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}/{context}/:resource/new",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              }
+            ]
+          },
+          "docs": "Render form for a new resource (editNew)"
+        },
+        {
+          "info": {
+            "name": "Show a single resource by id",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}/{context}/:resource/:id",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Resource identifier"
+              }
+            ]
+          },
+          "docs": "Show a single resource by id"
+        },
+        {
+          "info": {
+            "name": "Update a single resource (update)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://{host}/{context}/:resource/:id",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Resource identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a single resource (update)"
+        },
+        {
+          "info": {
+            "name": "Delete a single resource (destroy)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://{host}/{context}/:resource/:id",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Resource identifier"
+              }
+            ]
+          },
+          "docs": "Delete a single resource (destroy)"
+        },
+        {
+          "info": {
+            "name": "Render edit form for an existing resource (edit)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}/{context}/:resource/:id/edit",
+            "params": [
+              {
+                "name": "resource",
+                "value": "",
+                "type": "path",
+                "description": "The resource name (mapped to a Struts controller)"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Resource identifier"
+              }
+            ]
+          },
+          "docs": "Render edit form for an existing resource (edit)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
