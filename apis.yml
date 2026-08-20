@@ -28,6 +28,12 @@ tags:
   - MVC
   - Web Applications
   - Web Framework
+  - Open-Source
+tags_raw:
+  - Java
+  - MVC
+  - Web Applications
+  - Web Framework
   - Open Source
 created: '2026-03-16'
 modified: '2026-04-19'
@@ -60,6 +66,8 @@ apis:
   description: Generic RESTful resource exposed by the Struts REST plugin
   humanURL: https://struts.apache.org/plugins/rest/
   tags:
+  - Resource
+  tags_raw:
   - resource
   properties:
   - type: OpenAPI
