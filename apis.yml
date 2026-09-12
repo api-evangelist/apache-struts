@@ -88,6 +88,8 @@ apis:
   - type: OpenAPI
     url: openapi/apache-struts-resource-api-openapi.yml
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: SecurityPolicy
     url: https://github.com/apache/struts/blob/main/SECURITY.md
   - type: CodeOfConduct
