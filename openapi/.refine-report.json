@@ -1,7 +1,7 @@
 {
   "provider": "apache-struts",
   "sources": [
-    "apache-struts-resource-api-openapi.yml"
+    "_original/apache-struts-openapi.yml"
   ],
   "outputs": [
     "apache-struts-resource-api-openapi.yml"
@@ -9,6 +9,12 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-struts-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "apache-struts-resource-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

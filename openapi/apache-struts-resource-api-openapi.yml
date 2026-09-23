@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Struts REST Plugin resource API
+  title: Apache Struts REST Plugin Resource API
   description: The Apache Struts 2 REST Plugin provides RESTful resource-based mapping of HTTP requests to controller actions. URLs follow a convention-based pattern mapping HTTP verbs and URL shapes to controller methods (index, show, create, update, destroy, edit, editNew). This OpenAPI describes the generic URL convention applied to any resource exposed through the plugin.
   version: 1.0.0
   license:
@@ -20,7 +20,7 @@ servers:
 security:
 - strutsInterceptor: []
 tags:
-- name: resource
+- name: Resource
   description: Generic RESTful resource exposed by the Struts REST plugin
 paths:
   /{resource}:
@@ -28,7 +28,7 @@ paths:
     - $ref: '#/components/parameters/Resource'
     get:
       tags:
-      - resource
+      - Resource
       summary: List resources (index)
       operationId: indexResources
       responses:
@@ -40,7 +40,7 @@ paths:
             application/xhtml+xml: {}
     post:
       tags:
-      - resource
+      - Resource
       summary: Create a new resource
       operationId: createResource
       requestBody:
@@ -56,7 +56,7 @@ paths:
     - $ref: '#/components/parameters/Resource'
     get:
       tags:
-      - resource
+      - Resource
       summary: Render form for a new resource (editNew)
       operationId: editNewResource
       responses:
@@ -68,7 +68,7 @@ paths:
     - $ref: '#/components/parameters/Id'
     get:
       tags:
-      - resource
+      - Resource
       summary: Show a single resource by id
       operationId: showResource
       responses:
@@ -82,7 +82,7 @@ paths:
           description: Not found
     put:
       tags:
-      - resource
+      - Resource
       summary: Update a single resource (update)
       operationId: updateResource
       requestBody:
@@ -95,7 +95,7 @@ paths:
           description: Resource updated
     delete:
       tags:
-      - resource
+      - Resource
       summary: Delete a single resource (destroy)
       operationId: destroyResource
       responses:
@@ -107,7 +107,7 @@ paths:
     - $ref: '#/components/parameters/Id'
     get:
       tags:
-      - resource
+      - Resource
       summary: Render edit form for an existing resource (edit)
       operationId: editResource
       responses:
@@ -115,18 +115,18 @@ paths:
           description: Edit form representation
 components:
   parameters:
-    Id:
-      name: id
-      in: path
-      required: true
-      description: Resource identifier
-      schema:
-        type: string
     Resource:
       name: resource
       in: path
       required: true
       description: The resource name (mapped to a Struts controller)
+      schema:
+        type: string
+    Id:
+      name: id
+      in: path
+      required: true
+      description: Resource identifier
       schema:
         type: string
   securitySchemes:
