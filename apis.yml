@@ -43,13 +43,14 @@ tags:
   - MVC
   - Web Applications
   - Web Framework
-  - Open-Source
+  - Open Source
 tags_raw:
   - Java
   - MVC
   - Web Applications
   - Web Framework
   - Open Source
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-04-19'
 url: >-
@@ -77,7 +78,7 @@ apis:
     url: https://search.maven.org/search?q=org.apache.struts2
     title: Maven Java SDK
 - aid: apache-struts:apache-struts-resource-api
-  name: Apache Struts resource API
+  name: Apache Struts Resource API
   description: Generic RESTful resource exposed by the Struts REST plugin
   humanURL: https://struts.apache.org/plugins/rest/
   tags:
