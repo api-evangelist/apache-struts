@@ -115,18 +115,18 @@ paths:
           description: Edit form representation
 components:
   parameters:
-    Resource:
-      name: resource
-      in: path
-      required: true
-      description: The resource name (mapped to a Struts controller)
-      schema:
-        type: string
     Id:
       name: id
       in: path
       required: true
       description: Resource identifier
+      schema:
+        type: string
+    Resource:
+      name: resource
+      in: path
+      required: true
+      description: The resource name (mapped to a Struts controller)
       schema:
         type: string
   securitySchemes:
