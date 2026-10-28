@@ -1,4 +1,4 @@
-# Apache Struts (apache-struts)
+# Apache Struts
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,122 @@
 
 Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications. It provides a clean separation between the model, view, and controller layers with a powerful convention-over-configuration approach, interceptor-based AOP support, type-safe configuration, and built-in REST plugin. Apache Struts is maintained by the Apache Software Foundation and is widely used in enterprise Java web development.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-struts/refs/heads/main/apis.yml)
+**Areas:** Java · MVC · Web Applications · Web Framework · Open Source
 
-## Scope
+## Apache Struts on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Apache Struts is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-struts/](https://apis.io/providers/apache-struts/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (2)
 
-- Java
-- MVC
-- Web Applications
-- Web Framework
-- Open Source
+- [Apache Struts REST Plugin](https://apis.io/apis/apache-struts/apache-struts-rest-plugin/) — The Struts REST Plugin provides a convention-based REST API framework for building RESTful services. It maps HTTP methods to action methods (GET→index/show,…
+- [Apache Struts Resource API](https://apis.io/apis/apache-struts/apache-struts-resource-api/) — Generic RESTful resource exposed by the Struts REST plugin
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Apache Struts REST Plugin
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Struts REST Plugin provides a convention-based REST API framework for building RESTful services. It maps HTTP methods to action methods (GET→index/show, POST→create, PUT→update, DELETE→destroy) and supports multiple content type negotiation for JSON, XML, and HTML responses via content type headers and URL extensions.
+- [Apache Struts Agentic Access](https://apis.io/agentic-access/apache-struts/apache-struts-agentic-access/)
 
-- **Human URL:** [https://struts.apache.org/plugins/rest/](https://struts.apache.org/plugins/rest/)
+#### Collections (2)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- REST
-- Java
-- MVC
-- JSON
-- XML
+- [Apache Struts REST Plugin](https://apis.io/collections/apache-struts/open-apache-struts/)
+- [Apache Struts REST Plugin resource API](https://apis.io/collections/apache-struts/open-apache-struts-resource-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://struts.apache.org/plugins/rest/)
-- [SDK](https://search.maven.org/search?q=org.apache.struts2)
-- [Postman Collection](collections/apache-struts.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-struts.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Apache Struts Authentication](https://apis.io/security/apache-struts/apache-struts-authentication/)
+- [Apache Struts Domain Security](https://apis.io/security/apache-struts/apache-struts-domain-security/)
+- [Apache Struts Vulnerability Disclosure](https://apis.io/security/apache-struts/apache-struts-vulnerability-disclosure/)
 
-- [GitHub Repository](https://github.com/apache/struts)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Struts Plans Pricing](https://apis.io/plans/apache-struts/apache-struts-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Struts Rate Limits](https://apis.io/rate-limits/apache-struts/apache-struts-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Struts Finops](https://apis.io/finops/apache-struts/apache-struts-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://struts.apache.org/documentation.html)
-- [Portal](https://struts.apache.org/)
-- [Getting Started](https://struts.apache.org/getting-started/index.html)
-- [Release Notes](https://github.com/apache/struts/releases)
+- [Getting started](https://struts.apache.org/getting-started/index.html)
 - [Support](https://struts.apache.org/support.html)
-- [Terms of Service](https://www.apache.org/licenses/)
-- [F A Q](https://struts.apache.org/faq.html)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Blog](https://struts.apache.org/announce.html)
+- [Terms of service](https://www.apache.org/licenses/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 38.2** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 24.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 18.4 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-struts/](https://apis.io/providers/apache-struts/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Struts: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-struts/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
